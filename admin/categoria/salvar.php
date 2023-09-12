@@ -51,10 +51,10 @@ if (filter_input(INPUT_POST, 'btnsalvar')) {
     if ($cat->salvarFirebase() === true) {
         echo '<div class="alert alert-danger mt-3" role="alert">
         Erro
-    </div>';
+        </div>';
     } else {
         echo '<div class="alert alert-success mt-3" role="alert">
         Salvo
-    </div>';
+        </div>';
     }
 }
