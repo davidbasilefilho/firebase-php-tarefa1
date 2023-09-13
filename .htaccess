@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Define the base directory
+RewriteBase /2dsams/admin/
+
+# Redirect requests to index.php for dynamic routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]

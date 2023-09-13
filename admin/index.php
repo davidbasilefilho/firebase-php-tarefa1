@@ -18,13 +18,33 @@ if ($_SESSION['acesso'] != 'b8d66a4634503dcf530ce1b3704ca5dfae3d34bb') {
 <body>
     <?php include_once 'navbar.php'; ?>
     <div class="container p-4">
-        <?php
-        $pagina = filter_input(INPUT_GET, 'p');
+        <!-- $pagina = filter_input(INPUT_GET, 'p'); -->
 
-        if (isset($pagina) && !empty($pagina)) {
-            include_once $pagina . '.php';
-        } else {
-            include_once 'home.php';
+        <!-- if (isset($pagina) && !empty($pagina)) { -->
+        <!-- include_once $pagina . '.php'; -->
+        <!-- } else { -->
+        <!-- include_once 'home.php'; -->
+        <!-- } -->
+
+        <?php
+        $routes = [
+            '/2dsams/admin/' => 'home',
+            '/2dsams/admin/login' => 'login',
+            '/2dsams/admin/logout' => 'logout',
+            '/2dsams/admin/categoria/consultar' => 'categoria/consultar',
+            '/2dsams/admin/categoria/salvar' => 'categoria/salvar',
+            '/2dsams/admin/funcionario/consultar' => 'funcionario/consultar',
+            '/2dsams/admin/funcionario/salvar' => 'funcionario/salvar',
+        ];
+
+        $url = $_SERVER['REQUEST_URI'];
+
+        foreach ($routes as $route => $controller) {
+            if (preg_match("~^$route$~", $url, $matches)) {
+                include_once($controller . '.php');
+                // You can access matched parameters in $matches array
+                break; // Exit the loop when a match is found
+            }
         }
         ?>
     </div>

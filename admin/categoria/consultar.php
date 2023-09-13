@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-sm-12 mb-4">
         <h3 class="text-primary">
-            Lista de Categoria  
-            <a class="btn btn-success float-right" href="?p=categoria/salvar">
+            Lista de Categoria
+            <a class="btn btn-success float-right" href="/2dsams/admin/categoria/salvar">
                 Cadastrar
             </a>
-        </h3>  
+        </h3>
     </div>
 </div>
 
@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr >
+                <tr>
                     <td class="p-2">01</td>
                     <td class="p-2">Exemplo de categoria</td>
                     <td>

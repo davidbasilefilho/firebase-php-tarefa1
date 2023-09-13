@@ -2,7 +2,7 @@
     <div class="col-sm-12 mb-4">
         <h3 class="text-primary">
             Lista de Funcionário
-            <a class="btn btn-success float-right" href="?p=funcionario/salvar">
+            <a class="btn btn-success float-right" href="/2dsams/admin/funcionario/salvar">
                 Cadastrar
             </a>
         </h3>

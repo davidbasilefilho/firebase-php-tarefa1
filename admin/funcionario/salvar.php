@@ -47,7 +47,7 @@
             <div class="form-group row">
                 <div class="col-sm-12">
                     <input type="submit" class="btn btn-primary m-3" name="btnsalvar" id="btnsalvar" value="Salvar" />
-                    <a class="btn btn-danger" href="?p=categoria/consultar"><i class="bi bi-arrow-return-left"></i></a>
+                    <a class="btn btn-danger" href="/2dsams/admin/categoria/consultar"><i class="bi bi-arrow-return-left"></i></a>
                 </div>
             </div>
         </form>
